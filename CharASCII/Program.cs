@@ -10,6 +10,8 @@ namespace CharASCII {
             Encoding iso_8859_1 = Encoding.GetEncoding(1252);
             Encoding utf8       = Encoding.UTF8;
 
+            Console.OutputEncoding = iso_8859_1;
+
             for (int i = 0; i < byte.MaxValue + 1; i++) {
                 byte[] byteISO = new byte[] { (byte)i };
                 string strISO = iso_8859_1.GetString(byteISO);
